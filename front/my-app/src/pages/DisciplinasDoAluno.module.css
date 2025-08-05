@@ -1,0 +1,99 @@
+/* src/pages/DisciplinasDoAluno.module.css */
+
+.pageContainer {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.title {
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Reutilizando o estilo da busca da tela de Alocação */
+.searchContainer {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 2rem;
+}
+
+.searchLabel {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.searchInput {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.searchButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.searchButton:hover {
+  background-color: #0056b3;
+}
+
+/* Área de Resultados */
+.resultsContainer {
+  margin-top: 2rem;
+}
+
+.alunoInfoBox {
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  margin-bottom: 1.5rem;
+  border: 1px solid #dee2e6;
+}
+
+.alunoInfoBox h3 {
+  margin: 0 0 0.5rem 0;
+  color: #007bff;
+}
+
+.alunoInfoBox p {
+  margin: 0.25rem 0;
+  color: #495057;
+}
+
+.disciplinasList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.disciplinasList li {
+  padding: 0.75rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.disciplinasList li:last-child {
+  border-bottom: none;
+}
+
+.errorMessage {
+  text-align: center;
+  color: #dc3545;
+  font-weight: 500;
+  margin-top: 2rem;
+}

@@ -1,0 +1,125 @@
+/* src/pages/AlunoList.module.css */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  color: #2c3e50;
+}
+
+.newLink {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 18px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.newLink:hover {
+  background-color: #0056b3;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table th,
+.table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.table th {
+  background-color: #f8f9fa;
+  font-weight: 700;
+  color: #343a40;
+}
+
+.table tbody tr:nth-of-type(even) {
+  background-color: #f8f9fa;
+}
+
+.actionsCell {
+  display: flex;
+  gap: 10px;
+}
+
+.actionButton {
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: transform 0.2s ease-in-out;
+}
+
+.actionButton:hover {
+  transform: scale(1.05);
+}
+
+.editButton {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.deleteButton {
+  background-color: #dc3545;
+  color: white;
+}
+/* Adicione no final de AlunoList.module.css */
+
+@media (max-width: 768px) {
+  /* 1. Esconde o cabeçalho da tabela tradicional */
+  .table thead {
+    display: none;
+  }
+
+  /* 2. Faz cada célula da tabela ocupar a linha inteira */
+  .table,
+  .table tbody,
+  .table tr,
+  .table td {
+    display: block;
+    width: 100%;
+  }
+
+  /* 3. Adiciona espaçamento entre os "cards" (as linhas) */
+  .table tr {
+    margin-bottom: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+  }
+
+  .table td {
+    text-align: right; /* Alinha o conteúdo à direita */
+    padding-left: 50%; /* Deixa espaço para o "label" */
+    position: relative;
+    border-bottom: none; /* Remove as bordas entre as células */
+  }
+
+  /* 4. A mágica: Adiciona o label da coluna antes de cada dado */
+  .table td::before {
+    content: attr(data-label); /* Pega o texto do atributo 'data-label' */
+    position: absolute;
+    left: 15px; /* Alinha o label à esquerda */
+    width: calc(50% - 30px);
+    padding-right: 10px;
+    text-align: left;
+    font-weight: 700;
+  }
+
+  .actionsCell {
+    justify-content: flex-end; /* Alinha os botões à direita */
+  }
+}

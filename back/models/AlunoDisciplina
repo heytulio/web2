@@ -1,0 +1,31 @@
+const mongoose = require("mongoose");
+const { Schema } = mongoose;
+
+const alunoDisciplinaSchema = new Schema(
+  {
+    aluno: {
+      type: Schema.Types.ObjectId,
+      ref: "Aluno",
+      required: true,
+    },
+    disciplina: {
+      type: Schema.Types.ObjectId,
+      ref: "Disciplina",
+      required: true,
+    },
+    frequencia: {
+      type: Number,
+      default: null,
+    },
+  },
+  { timestamps: true }
+);
+
+const AlunoDisciplina = mongoose.model(
+  "AlunoDisciplina",
+  alunoDisciplinaSchema
+);
+module.exports = {
+  AlunoDisciplina,
+  alunoDisciplinaSchema,
+};

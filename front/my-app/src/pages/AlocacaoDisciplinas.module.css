@@ -1,0 +1,151 @@
+/* src/pages/Alocacao.module.css */
+
+.pageContainer {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.title {
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* --- Área de Busca --- */
+.searchContainer {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 2rem;
+}
+
+.searchLabel {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.searchInput {
+  flex-grow: 1; /* Faz o input ocupar o espaço disponível */
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.searchButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.searchButton:hover {
+  background-color: #0056b3;
+}
+
+.searchButton:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+/* --- Área do Aluno Encontrado --- */
+.alunoInfo {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: #e9f7ff;
+  border-left: 5px solid #007bff;
+}
+
+.alunoNome {
+  margin: 0;
+  color: #004085;
+}
+
+/* --- Container das Listas (Lado a Lado) --- */
+.listsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Duas colunas de tamanho igual */
+  gap: 2rem; /* Espaço entre as colunas */
+}
+
+.listWrapper {
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.listTitle {
+  margin-top: 0;
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  color: #495057;
+}
+
+.disciplineList {
+  list-style-type: none; /* Remove as bolinhas da lista */
+  padding: 0;
+  margin: 0;
+}
+
+.disciplineItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f1f3f5;
+}
+
+.disciplineItem:last-child {
+  border-bottom: none;
+}
+
+.actionButton {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  color: white;
+  transition: opacity 0.2s;
+}
+
+.actionButton:hover {
+  opacity: 0.8;
+}
+
+.alocarButton {
+  background-color: #28a745; /* Verde */
+}
+
+.desalocarButton {
+  background-color: #dc3545; /* Vermelho */
+}
+
+.emptyListMessage {
+  color: #6c757d;
+  font-style: italic;
+  padding: 1rem 0;
+}
+@media (max-width: 768px) {
+  .listsContainer {
+    /* Em telas menores, muda de 2 colunas para 1 coluna */
+    grid-template-columns: 1fr;
+  }
+
+  .searchContainer {
+    flex-direction: column; /* Coloca o input e o botão um sobre o outro */
+    align-items: stretch; /* Faz com que ambos ocupem a largura total */
+  }
+}

@@ -1,0 +1,91 @@
+/* src/pages/AlunoForm.module.css */
+
+.formContainer {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  max-width: 600px; /* Um pouco mais largo para formulários */
+  margin: 2rem auto;
+}
+
+.title {
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Um grupo para cada label + input, para controlar o espaçamento */
+.formGroup {
+  margin-bottom: 1rem;
+}
+
+.label {
+  display: block; /* Garante que o label fique em sua própria linha */
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #495057;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Destaque visual quando o usuário clica no campo */
+.input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+/* Estilo para campos desabilitados */
+.input:disabled {
+  background-color: #e9ecef;
+  cursor: not-allowed;
+}
+
+/* Container para os botões, alinhados à direita */
+.buttonGroup {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem; /* Espaço entre os botões */
+  margin-top: 2rem;
+}
+
+.submitButton {
+  background-color: #28a745; /* Verde para sucesso/criar */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submitButton:hover {
+  background-color: #218838;
+}
+
+.cancelButton {
+  background-color: #6c757d; /* Cinza para cancelar */
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+}
+
+.cancelButton:hover {
+  background-color: #5a6268;
+}
